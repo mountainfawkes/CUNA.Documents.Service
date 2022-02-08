@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CUNA.Documents.Service.Mode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CUNA.Documents.Service.ThirdParty", "CUNA.Documents.Service.Client\CUNA.Documents.Service.ThirdParty.csproj", "{5DBDF973-56FA-4F74-BAA5-DE2BDE98510B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUNA.Documents.Service.Tests", "CUNA.Documents.Service.Tests\CUNA.Documents.Service.Tests.csproj", "{A4EAB7B1-F564-407C-B093-57DA641E94A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUNA.Documents.Service.Test", "CUNA.Documents.Service.Test\CUNA.Documents.Service.Test.csproj", "{0150E310-7E82-429B-99DF-42692855A2B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +32,10 @@ Global
 		{5DBDF973-56FA-4F74-BAA5-DE2BDE98510B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DBDF973-56FA-4F74-BAA5-DE2BDE98510B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DBDF973-56FA-4F74-BAA5-DE2BDE98510B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4EAB7B1-F564-407C-B093-57DA641E94A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4EAB7B1-F564-407C-B093-57DA641E94A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4EAB7B1-F564-407C-B093-57DA641E94A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4EAB7B1-F564-407C-B093-57DA641E94A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0150E310-7E82-429B-99DF-42692855A2B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0150E310-7E82-429B-99DF-42692855A2B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0150E310-7E82-429B-99DF-42692855A2B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0150E310-7E82-429B-99DF-42692855A2B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
