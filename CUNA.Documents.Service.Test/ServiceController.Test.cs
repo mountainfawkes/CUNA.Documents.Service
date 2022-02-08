@@ -21,7 +21,7 @@ namespace CUNA.Documents.Service.Tests
         public async void ReturnsParamInput()
         {
             var response = await controller.Post(id);
-            Assert.Equal(payload, response);
+            Assert.Equal(payload.Callback, response.Value.Callback);
         }
     }
 }
