@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CUNA.Documents.Service.Models\CUNA.Documents.Service.Models.csproj" />
+  </ItemGroup>
+
+</Project>

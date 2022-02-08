@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CUNA.Documents.Service.Models;
-using CUNA.Documents.Service.Client;
+using CUNA.Documents.Service.ThirdParty;
 
 namespace CUNA.Documents.Service.Controllers
 {
@@ -27,7 +27,7 @@ namespace CUNA.Documents.Service.Controllers
 
             try
             {
-                string response = await Client.ServiceRequest(requestPayload);
+                string response = await ThirdPartyClient.ServiceRequest(requestPayload);
                 return response;
             }
             catch (Exception ex)
