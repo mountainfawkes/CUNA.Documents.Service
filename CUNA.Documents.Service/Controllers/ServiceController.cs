@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CUNA.Documents.Service.Models;
+using CUNA.Documents.Service.Client;
 
 namespace CUNA.Documents.Service.Controllers
 {
@@ -15,14 +16,17 @@ namespace CUNA.Documents.Service.Controllers
         // Post a request
         [Route("/request")]
         [HttpPost]
-        public async Task<ActionResult<Payload>> Post()
+        public async Task<ActionResult<string>> Post(string body)
         {
-            return new Payload
-            {
-                Body = "string",
+            Guid newId = Guid.NewGuid();
+            Payload requestPayload = new Payload {
+                Body = body,
                 CreatedAt = DateTime.Now,
-                ModifiedAt = DateTime.Now
+                Id = newId,
+                Callback = $"/callback/{newId}"
             };
+            string response = await Client.ServiceRequest(requestPayload.Id);
+            return response;
         }
 
         // Post a callback
