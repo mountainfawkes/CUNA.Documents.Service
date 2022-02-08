@@ -50,7 +50,7 @@ namespace CUNA.Documents.Service.Controllers
         {
             return new Payload()
             {
-                Callback = null
+                Callback = $"/callback/{id}"
             };
         }
 

@@ -1,5 +1,6 @@
 ﻿using CUNA.Documents.Service.Controllers;
 using CUNA.Documents.Service.Models;
+using Newtonsoft.Json;
 using System;
 using Xunit;
 
@@ -13,7 +14,7 @@ namespace CUNA.Documents.Service.Tests
 
         public static Payload payload = new Payload()
         {
-            Callback = $"callback/{id}"
+            Callback = $"/callback/{id}"
         };
 
         [Fact]
