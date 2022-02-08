@@ -13,7 +13,7 @@ namespace CUNA.Documents.Service.ThirdParty
         public static async Task<string> ServiceRequest(Payload payload)
         {
             payload.Callback = $"/callback/{payload.Id}";
-            return payload.Status;
+            return payload.Body;
         }
     }
 }
