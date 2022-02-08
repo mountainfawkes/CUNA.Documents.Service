@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CUNA.Documents.Service.Models;
 using CUNA.Documents.Service.ThirdParty;
+using System.Net.Http;
 
 namespace CUNA.Documents.Service.Controllers
 {
@@ -18,21 +19,27 @@ namespace CUNA.Documents.Service.Controllers
         [HttpPost]
         public async Task<ActionResult<string>> Post(string body)
         {
+            // prepare the request payload
+
             Guid newId = Guid.NewGuid();
             Payload requestPayload = new Payload {
                 Body = body,
                 CreatedAt = DateTime.Now,
                 Id = newId,
+                Callback = $"/callback/{newId}"
             };
 
+            // invoke the client request to the third-party service
             try
             {
-                string response = await ThirdPartyClient.ServiceRequest(requestPayload);
-                return response;
+                HttpResponseMessage response = await ThirdPartyClient.ServiceRequest(requestPayload);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                return responseBody;
             }
-            catch (Exception ex)
+            catch (HttpRequestException e)
             {
-                return ex.Message;
+                return e.Message;
             }
         }
 
