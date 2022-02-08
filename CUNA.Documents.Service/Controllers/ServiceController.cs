@@ -48,9 +48,9 @@ namespace CUNA.Documents.Service.Controllers
         [HttpPost]
         public async Task<ActionResult<Payload>> Post(Guid id)
         {
-            return new Payload
+            return new Payload()
             {
-                Status = "STARTED"
+                Callback = null
             };
         }
 
