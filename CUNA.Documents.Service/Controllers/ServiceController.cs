@@ -23,10 +23,17 @@ namespace CUNA.Documents.Service.Controllers
                 Body = body,
                 CreatedAt = DateTime.Now,
                 Id = newId,
-                Callback = $"/callback/{newId}"
             };
-            string response = await Client.ServiceRequest(requestPayload.Id);
-            return response;
+
+            try
+            {
+                string response = await Client.ServiceRequest(requestPayload);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         // Post a callback
